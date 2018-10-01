@@ -1,0 +1,47 @@
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;script language=&quot;javascript&quot;&gt;
+function Provera() {
+var email = document.getElementById(&quot;email&quot;).value;
+var sifra = document.getElementById(&quot;password&quot;).value;
+if (email.trim() == &quot;&quot;) {
+alert(&quot;Unesite email&quot;);
+return false;
+}
+if (sifra == &quot;&quot;) {
+alert(&quot;Unesite sifru&quot;);
+return false;
+}
+if (sifra.trim().length &lt; 8) {
+alert(&quot;Sifra mora da ima najmanje 8 karaktera&quot;);
+return false;
+}
+return true;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form action=&quot;NovKorisnik.aspx&quot; method=&quot;post&quot; onsubmit = &quot;return Provera();&quot;&gt;
+Email: &lt;input type=&quot;email&quot; maxlength=&quot;50&quot; name=&quot;email&quot; id=&quot;email&quot;
+placeholder=&quot;Unesite email&quot; /&gt; &lt;!-- OVDE SMO SKINULI REQUIRED DA BISMO TESTIRALI
+VALIDACIJU IZ JAVA SCRIPTA--&gt;
+&lt;br/&gt;
+&lt;br /&gt;
+Korisnicko ime: &lt;input type=&quot;text&quot; maxlength=&quot;50&quot; name=&quot;korisnickoIme&quot;
+id=&quot;korisnickoIme&quot; required/&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Sifra: &lt;input type=&quot;password&quot; maxlength=&quot;50&quot; name=&quot;password&quot; id=&quot;password&quot; /&gt; &lt;!-
+- OVDE SMO SKINULI REQUIRED DA BISMO TESTIRALI VALIDACIJU IZ JAVA SCRIPTA--&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Adresa: &lt;input type=&quot;text&quot; maxlength=&quot;100&quot; name=&quot;adresa&quot; id=&quot;adresa&quot; required /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Grad: &lt;input type=&quot;text&quot; maxlength=&quot;30&quot; name=&quot;grad&quot; id=&quot;grad&quot; required /&gt;
+<body>
+</html>
